@@ -1,0 +1,52 @@
+<template>
+  <!-- <van-search
+    placeholder="请输入搜索关键词"
+    use-action-slot
+    bindblur="handleInput"
+    bindsearch="onSearch"
+    background="rgba(0,0,0,.1)"
+  >
+    <view slot="action" bind:tap="onSearch">搜索</view>
+  </van-search> -->
+  <view>
+    <input name="cus" bindinput="bindTestInput" />
+    <view>{{ value }}</view>
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  export default class BaseSearch extends wepy.component {
+    config = {
+      usingComponents: {
+        // 'van-grid': '../components/vant/grid/index',
+        // 'van-grid-item': '../components/vant/grid-item/index',
+        'van-search': '../components/vant/search/index',
+        'van-notice-bar': '../components/vant/notice-bar/index'
+      }
+    }
+    // props = {
+    //   value: String
+    // }
+    data = {
+      value: '111'
+    }
+    methods = {
+      onSubmit: function(e) {
+        console.log(561561)
+        console.log(e)
+      },
+      //   onSearch() {
+      //     console.log(this.value)
+      //   },
+      bindTestInput(e) {
+        this.value = e.detail.value
+      }
+      //   addTag() {
+      //     console.log(this.value)
+      //   }
+    }
+  }
+</script>
+
+<style></style>

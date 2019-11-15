@@ -1,0 +1,14 @@
+<template>
+  <van-notice-bar mode="closeable" text="{{notice}}" />
+</template>
+
+<script>
+  import wepy from 'wepy'
+  export default class BaseNotice extends wepy.component {
+    props = {
+      notice: String
+    }
+  }
+</script>
+
+<style></style>

@@ -1,0 +1,55 @@
+<script>
+  import wepy from 'wepy'
+  import 'wepy-async-function'
+
+  export default class extends wepy.app {
+    config = {
+      pages: ['pages/index', 'pages/course', 'pages/bonus', 'pages/mine'],
+      window: {
+        backgroundTextStyle: 'light',
+        navigationBarBackgroundColor: '#fff',
+        navigationBarTitleText: 'WeChat',
+        navigationBarTextStyle: 'black'
+      },
+      tabBar: {
+        selectedColor: '#2299dd',
+        list: [
+          {
+            pagePath: 'pages/index',
+            text: '首页',
+            iconPath: './assets/images/index.png',
+            selectedIconPath: './assets/images/index-active.png'
+          },
+          {
+            pagePath: 'pages/course',
+            text: '课程',
+            iconPath: './assets/images/course.png',
+            selectedIconPath: './assets/images/course-active.png'
+          },
+          {
+            pagePath: 'pages/bonus',
+            text: '赏金',
+            iconPath: './assets/images/bonus.png',
+            selectedIconPath: './assets/images/bonus-active.png'
+          },
+          {
+            pagePath: 'pages/mine',
+            text: '我的',
+            iconPath: './assets/images/mine.png',
+            selectedIconPath: './assets/images/mine-active.png'
+          }
+        ]
+      }
+    }
+
+    globalData = {
+      userInfo: null
+    }
+
+    constructor() {
+      super()
+      this.use('requestfix')
+      this.use('promisify')
+    }
+  }
+</script>

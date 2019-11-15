@@ -1,0 +1,17 @@
+<template>
+  <view class="container">
+    赏金页面
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+
+  export default class BonusPage extends wepy.page {
+    config = {
+      navigationBarTitleText: '奖学金'
+    }
+  }
+</script>
+
+<style></style>

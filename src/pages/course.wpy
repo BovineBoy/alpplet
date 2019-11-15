@@ -1,0 +1,17 @@
+<template>
+  <view class="conatiner">
+    课程页面
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+
+  export default class CoursePage extends wepy.page {
+    config = {
+      navigationBarTitleText: '已购课程'
+    }
+  }
+</script>
+
+<style></style>

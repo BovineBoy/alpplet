@@ -1,0 +1,17 @@
+<template>
+  <view>
+    我的
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+
+  export default class MinePage extends wepy.page {
+    config = {
+      navigationBarTitleText: '学员中心'
+    }
+  }
+</script>
+
+<style></style>
